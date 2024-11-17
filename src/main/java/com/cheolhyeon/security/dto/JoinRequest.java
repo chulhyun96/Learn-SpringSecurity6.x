@@ -17,7 +17,7 @@ public class JoinRequest {
         return UserEntity.builder()
                 .username(username)
                 .password(passwordEncoder.encode(password))
-                .role("ROLE_USER")
+                .role("ROLE_ADMIN")
                 .build();
     }
 }

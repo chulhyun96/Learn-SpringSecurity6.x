@@ -1,6 +1,7 @@
 package com.cheolhyeon.security.service;
 
 import com.cheolhyeon.security.dto.JoinRequest;
+import com.cheolhyeon.security.entity.UserEntity;
 import com.cheolhyeon.security.exception.UsernameAlreadyExist;
 import com.cheolhyeon.security.repository.UserRepository;
 import com.cheolhyeon.security.type.ErrorStatus;

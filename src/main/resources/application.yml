@@ -4,7 +4,9 @@ spring:
     username: sa
     password:
     driver-class-name: org.h2.Driver
-
+  mustache:
+    servlet:
+      expose-request-attributes: true
   h2:
     console:
       enabled: true
@@ -20,3 +22,10 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
+
+
+server:
+  servlet:
+    session:
+      timeout: 1m # 1 minute -> 1분
+

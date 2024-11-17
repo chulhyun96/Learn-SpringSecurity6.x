@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public enum ErrorStatus {
-    USERNAME_ALREADY_EXIST("해당 아이디는 이미 존재합니다.");
+    USERNAME_ALREADY_EXIST("The Username Already Exist.");
 
     private final String message;
 
