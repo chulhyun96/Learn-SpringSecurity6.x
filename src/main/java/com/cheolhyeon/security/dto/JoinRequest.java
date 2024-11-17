@@ -14,9 +14,10 @@ public class JoinRequest {
     private String password;
 
     public UserEntity toEntity(PasswordEncoder passwordEncoder) {
-        return UserEntity.builder().
-                username(username).
-                password(passwordEncoder.encode(password)).
-                build();
+        return UserEntity.builder()
+                .username(username)
+                .password(passwordEncoder.encode(password))
+                .role("ROLE_USER")
+                .build();
     }
 }

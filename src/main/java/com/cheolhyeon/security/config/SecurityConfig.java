@@ -27,7 +27,8 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeRequests(auth -> auth
-                .requestMatchers("/", "/login").permitAll()
+                // 인덱스 페이지,로그인 페이지,회원가입 페이지,회원가입 절차를 진행할 API 호출의 경로를 넣어줌
+                .requestMatchers("/", "/login","/join","/joinProc").permitAll()
                 .requestMatchers("/admin").hasRole("ADMIN")
                 .requestMatchers("/my/**").hasAnyRole("ADMIN", "USER")
                 .anyRequest().authenticated()
