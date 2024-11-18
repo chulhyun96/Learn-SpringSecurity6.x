@@ -1,0 +1,15 @@
+### H2console
+GET http://localhost:8080/h2-console
+
+### MainPage
+GET localhost:8080/
+Accept: application/json
+
+### JoinContorller
+POST localhost:8080/join
+Content-Type: application/json
+
+{
+  "username" : "Test_User1",
+  "password" : "12345"
+}

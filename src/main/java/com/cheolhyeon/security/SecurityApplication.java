@@ -1,9 +1,12 @@
 package com.cheolhyeon.security;
 
+import com.cheolhyeon.security.api.security.config.SecurityConfigAPI;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Import;
 
-@SpringBootApplication
+
+@SpringBootApplication(scanBasePackages = "com.cheolhyeon.security.api")
 public class SecurityApplication {
 
     public static void main(String[] args) {
