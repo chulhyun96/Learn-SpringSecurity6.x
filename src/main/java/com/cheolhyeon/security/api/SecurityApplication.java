@@ -1,10 +1,8 @@
-package com.cheolhyeon.security;
+package com.cheolhyeon.security.api;
 
-import com.cheolhyeon.security.api.security.config.SecurityConfigAPI;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Import;
-
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication(scanBasePackages = "com.cheolhyeon.security.api")
 public class SecurityApplication {

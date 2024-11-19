@@ -1,6 +1,7 @@
 package com.cheolhyeon.security.api.security.entity;
 
-import com.cheolhyeon.security.api.security.type.AuthorityStatus;
+import com.cheolhyeon.security.api.security.dto.JoinRequest;
+import com.cheolhyeon.security.api.security.type.AuthorityPolicy;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,5 +23,21 @@ public class User {
     private String password;
 
     @Enumerated(EnumType.STRING)
-    private AuthorityStatus role;
+    private AuthorityPolicy role;
+
+    public User(String username, AuthorityPolicy role) {
+        this.username = username;
+        this.role = role;
+    }
+
+    public static User of(JoinRequest joinRequest, String encodedPassword) {
+        return User.builder()
+                .username(joinRequest.getUsername())
+                .password(encodedPassword)
+                .role(AuthorityPolicy.ROLE_ADMIN)
+                .build();
+    }
+    public String getRoleAsString() {
+        return role.toString();
+    }
 }

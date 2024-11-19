@@ -19,6 +19,7 @@ public class UserService {
         if (userRepository.existsByUsername(joinRequest.getUsername())) {
             throw new UsernameAlreadyExist(ErrorStatus.USERNAME_ALREADY_EXIST);
         }
-        return userRepository.save(joinRequest.toEntity(passwordEncoder));
+        String encode = passwordEncoder.encode(joinRequest.getPassword());
+        return userRepository.save(User.of(joinRequest, encode));
     }
 }

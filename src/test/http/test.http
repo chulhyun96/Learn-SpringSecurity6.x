@@ -1,9 +1,14 @@
+@auth_token = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlRlc3RfVXNlcjEiLCJyb2xlIjoiUk9MRV9BRE1JTiIsImlhdCI6MTczMjAzNjYzMywiZXhwIjoxNzMyMDQwMjMzfQ.EKK7zgpNCHPsMPL8d1h2V9EHwFsRJWOTDRc3iyJHLKA
 ### H2console
 GET http://localhost:8080/h2-console
 
 ### MainPage
-GET localhost:8080/
+GET localhost:8080
 Accept: application/json
+
+### AdminPage
+GET localhost:8080/admin4
+Authorization: Bearer {{auth_token}}
 
 ### JoinContorller
 POST localhost:8080/join
@@ -11,5 +16,16 @@ Content-Type: application/json
 
 {
   "username" : "Test_User1",
-  "password" : "12345"
+  "password" : "1234"
 }
+
+### Login
+POST  localhost:8080/login
+Content-Type: application/json
+
+{
+  "username" : "Test_User1",
+  "password" : "1234"
+}
+
+

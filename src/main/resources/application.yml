@@ -23,9 +23,12 @@ spring:
         format_sql: true
         show_sql: true
 
-
 server:
   servlet:
     session:
       timeout: 1m # 1 minute -> 1분
+
+jwt:
+    secret: j+80yZ9tZkYWItMxvb7vITPeWUBg3hHqeaul0/WpNpKuGt/6BwPMGzBdqwm9/CK5Yh9L65Y0dejvWPNd3Jh3vQ==
+
 
